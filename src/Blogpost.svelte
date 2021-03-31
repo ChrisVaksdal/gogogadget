@@ -1,16 +1,9 @@
 <script lang="ts">
-	import 'bulma/css/bulma.css';
+	import 'bulma/css/bulma.css'
 
-	import { onMount } from 'svelte';
+	import { onMount } from 'svelte'
 
-	let blogPostURL: string = '../blog-posts/test-post';
-
-	function calculateBlogPostURL(){
-		let path: string = window.location.href
-		blogPostURL = path.substring(path.lastIndexOf('/') + 1)
-	}
-
-	onMount(() => calculateBlogPostURL())
+	export let blogPostURL: string
 
 	/**
 	 * Fetches a markdown blog post using the local API.
@@ -31,12 +24,9 @@
 	{#await fetchPost(blogPostURL)}
 	<span class="loading">Loading post...</span>
 	{:then blog}
-		Data:<br>
 		<section class="blog-post">
 			{@html blog}
 		</section>
-		
-		<br>End data.
 	{:catch error}
 		<p>An error occurred!</p>
 		{error}

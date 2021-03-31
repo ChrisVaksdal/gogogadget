@@ -59,8 +59,6 @@
 
 	</section>
 
-	<Footer />
-
 </main>
 
 <style>
