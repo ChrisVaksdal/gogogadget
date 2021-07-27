@@ -1,15 +1,18 @@
 <script lang="ts">
 
+	
 	import Blog from '../routes/Blog.svelte'
-
+	
 	import 'bulma/css/bulma.css'
+	import { Button } from 'svelma'
 
 	import Header from '../src/Header.svelte'
 	import About from '../src/About.svelte'
 	import Skills from '../src/Skills.svelte'
 	import Experience from '../src/Experience.svelte'
 	import Contact from '../src/Contact.svelte'
-	import Footer from '../src/Footer.svelte'
+
+	import ToTopButton from './ToTopButton.svelte';
 
 </script>
 
@@ -19,6 +22,8 @@
 </svelte:head>
 
 <main>
+
+	<ToTopButton />
 
 	<Header 
 

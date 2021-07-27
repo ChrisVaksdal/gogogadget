@@ -48,14 +48,14 @@
     box-shadow: 0 5px 20px rgba(14, 25, 80, 0.3);
 }
 
-  @media (max-width: 599px) {
+  @media (max-width: 699px) {
     .right-image img {
       margin: auto;
       height: 50%;
     }
   }
 
-  @media (max-width: 599px) {
+  @media (max-width: 699px) {
   .contact {
     text-align: center;
   }

@@ -12,6 +12,7 @@
   
     // Mobile menu click event handler
     const handleMobileIconClick = () => (showMobileMenu = !showMobileMenu)
+    const handleMobileItemClick= () => (showMobileMenu = false)
   
     // Media match query handler
     const mediaQueryHandler = e => {
@@ -39,7 +40,7 @@
         {#each navItems as item}
           <li class="nav-item">
             {#if item.id}
-              <a use:scrollto={item.id} href='#/'>{item.label}</a>
+              <a on:click={handleMobileItemClick} use:scrollto={item.id} href='#/'>{item.label}</a>
             {:else}
               <a href={item.href}>{item.label}</a>
             {/if}
@@ -79,6 +80,7 @@
       height: 14px;
       position: relative;
       cursor: pointer;
+      z-index: 99;
     }
   
     .mobile-icon:after,

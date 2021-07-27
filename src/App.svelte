@@ -1,6 +1,8 @@
 <script lang="ts">
 
 	import router from 'page'
+	import ErrorPage from "../routes/ErrorPage.svelte"
+
 	import Home from '../routes/Home.svelte'
 	import Blog from '../routes/Blog.svelte'
 	import Post from '../routes/Post.svelte'
@@ -21,6 +23,7 @@
 			},
 		() => (page = Post)
   	)
+	router('/*', () => page = ErrorPage)
 
 	router.start()
 
